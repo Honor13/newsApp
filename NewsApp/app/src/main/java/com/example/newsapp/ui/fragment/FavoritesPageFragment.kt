@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import com.example.newsapp.R
 
 
-class LaunchScreenFragment : Fragment() {
+class FavoritesPageFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_launch_screen, container, false)
+        return inflater.inflate(R.layout.fragment_favorites_page, container, false)
     }
 
 
