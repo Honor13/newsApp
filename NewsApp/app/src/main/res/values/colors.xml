@@ -10,4 +10,6 @@
     <color name="cardBackgroundColor">#E3F4F4</color>
     <color name="iconColor">#D2E9E9</color>
     <color name="buttonColor">#C4DFDF</color>
+    <color name="darkLayout">#C4DFDF</color>
+
 </resources>
