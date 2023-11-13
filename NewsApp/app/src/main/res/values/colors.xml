@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- By System defined colors-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Our project colors-->
+    <color name="textColor">#FF000000</color>
+    <color name="layoutBackgroundColor">#F8F6F4</color>
+    <color name="cardBackgroundColor">#E3F4F4</color>
+    <color name="iconColor">#D2E9E9</color>
+    <color name="buttonColor">#C4DFDF</color>
 </resources>
