@@ -3,30 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/homePageFragment">
+    app:startDestination="@id/loginScreenFragment">
     <fragment
-        android:id="@+id/homePageFragment"
-        android:name="com.example.newsapp.ui.fragment.HomePageFragment"
-        android:label="fragment_home_page"
-        tools:layout="@layout/fragment_home_page" />
+        android:id="@+id/bottomNavigatonHolderFragment"
+        android:name="com.example.newsapp.ui.fragment.BottomNavigatonHolderFragment"
+        android:label="fragment_bottom_navigaton_holder"
+        tools:layout="@layout/fragment_bottom_navigaton_holder" />
     <fragment
-        android:id="@+id/categoriesPageFragment"
-        android:name="com.example.newsapp.ui.fragment.CategoriesPageFragment"
-        android:label="fragment_categories_page"
-        tools:layout="@layout/fragment_categories_page" />
-    <fragment
-        android:id="@+id/favoritesPageFragment"
-        android:name="com.example.newsapp.ui.fragment.FavoritesPageFragment"
-        android:label="fragment_favorites_page"
-        tools:layout="@layout/fragment_favorites_page" />
-    <fragment
-        android:id="@+id/profilePageFragment"
-        android:name="com.example.newsapp.ui.fragment.ProfilePageFragment"
-        android:label="fragment_profile_page"
-        tools:layout="@layout/fragment_profile_page" />
-    <fragment
-        android:id="@+id/searchPageFragment"
-        android:name="com.example.newsapp.ui.fragment.SearchPageFragment"
-        android:label="fragment_search_page"
-        tools:layout="@layout/fragment_search_page" />
+        android:id="@+id/loginScreenFragment"
+        android:name="com.example.newsapp.ui.fragment.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/transationBottomNavHolder"
+            app:destination="@id/bottomNavigatonHolderFragment" />
+    </fragment>
 </navigation>
