@@ -20,4 +20,8 @@
     <string name="enter_username">Enter Username</string>
     <string name="enter_repassword">Enter Repassword</string>
     <string name="i_forgot_my_password">I forgot my password</string>
+    <string name="reset">Reset</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>
