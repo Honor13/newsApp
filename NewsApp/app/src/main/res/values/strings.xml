@@ -14,4 +14,10 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="sign_in">Sign In</string>
     <string name="dont_have_an_account">Don\'t have an account ?</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="submit">Submit</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_repassword">Enter Repassword</string>
+    <string name="i_forgot_my_password">I forgot my password</string>
 </resources>
