@@ -121,6 +121,36 @@ class HomePageFragment : Fragment() {
                 name = "Lorem İpsum Dolor",
                 description = "Lorem Ipsum is simply dummy text of the printing."
             ),
+            News(
+                id = "",
+                category = "",
+                language = "",
+                country = "",
+                url = "https://www.marketscreener.com/images/reuters/2019-02/2019-02-04T141305Z_1_LYNXNPEF1314N_RTROPTP_3_TESLA-LAYOFFSS.JPG",
+                name = "Lorem İpsum Dolor",
+                description = "Lorem Ipsum is simply dummy text of the printing."
+
+            ),
+            News(
+                id = "",
+                category = "",
+                language = "",
+                country = "",
+                url = "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2023/11/0/0/GettyImages-1258553989.jpg?ve=1&tl=1",
+                name = "Lorem İpsum Dolor",
+                description = "Lorem Ipsum is simply dummy text of the printing."
+
+            ),
+            News(
+                id = "",
+                category = "",
+                language = "",
+                country = "",
+                url = "https://s.yimg.com/ny/api/res/1.2/rr2uCHkNnpizYD5xsx5alA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-11/8f905dc0-7f48-11ee-bf3b-a1d7773a597c",
+                name = "Lorem İpsum Dolor",
+                description = "Lorem Ipsum is simply dummy text of the printing."
+
+            ),
 
             ))
 
