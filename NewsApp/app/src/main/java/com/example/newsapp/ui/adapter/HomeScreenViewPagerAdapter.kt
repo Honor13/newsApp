@@ -2,6 +2,7 @@ package com.example.newsapp.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +36,7 @@ class HomeScreenViewPagerAdapter(var newsList:List<HomeScreenViewPagerItems>) : 
 //        Glide.with(b.root.context).load(news.viewPageImage).override(700,750).into(b.imageViewNews)
         b.textDescription.text = news.description
         b.textTitle.text = news.title
+        b.progressBar.visibility = View.INVISIBLE
     }
 
 
