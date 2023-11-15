@@ -1,17 +1,16 @@
 package com.example.newsapp.ui.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
-import com.example.newsapp.data.viewpageritems.HomeScreenViewPagerItems
+import com.example.newsapp.data.entity.News
 import com.example.newsapp.databinding.ViewPagerScreenBinding
 import com.squareup.picasso.Picasso
 
-class HomeScreenViewPagerAdapter(var newsList:List<HomeScreenViewPagerItems>) : RecyclerView.Adapter<HomeScreenViewPagerAdapter.ViewPagerViewHolder>() {
+class HomeScreenViewPagerAdapter(var newsList:List<News>) : RecyclerView.Adapter<HomeScreenViewPagerAdapter.ViewPagerViewHolder>() {
 
     inner class ViewPagerViewHolder(var binding:ViewPagerScreenBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -30,12 +29,12 @@ class HomeScreenViewPagerAdapter(var newsList:List<HomeScreenViewPagerItems>) : 
         val news = newsList.get(position)
         val b = holder.binding
         Picasso.get()
-            .load(news.viewPageImage)
+            .load(news.url)
             .resize(900,600)
             .into(b.imageViewNews)
 //        Glide.with(b.root.context).load(news.viewPageImage).override(700,750).into(b.imageViewNews)
         b.textDescription.text = news.description
-        b.textTitle.text = news.title
+        b.textTitle.text = news.name
         b.progressBar.visibility = View.INVISIBLE
     }
 
