@@ -11,4 +11,5 @@
     <color name="cardBackgroundColor">#E3F4F4</color>
     <color name="iconColor">#D2E9E9</color>
     <color name="buttonColor">#2A7E7E</color>
+    <color name="transparentGray">#80CBC9CC</color>
 </resources>
