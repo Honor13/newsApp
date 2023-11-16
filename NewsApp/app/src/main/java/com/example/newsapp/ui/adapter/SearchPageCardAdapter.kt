@@ -25,7 +25,7 @@ class SearchPageCardAdapter (var mContext: Context, var newsList:List<News>)
         val news = newsList.get(position)
         val t = holder.binding
 
-        t.textName.text=news.name
+        t.textHead.text=news.name
         t.textDescription.text=news.description
         t.textMinute.text=news.category
 
