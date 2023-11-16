@@ -8,7 +8,11 @@
         android:id="@+id/bottomNavigatonHolderFragment"
         android:name="com.example.newsapp.ui.fragment.BottomNavigatonHolderFragment"
         android:label="fragment_bottom_navigaton_holder"
-        tools:layout="@layout/fragment_bottom_navigaton_holder" />
+        tools:layout="@layout/fragment_bottom_navigaton_holder" >
+        <action
+            android:id="@+id/transactionGetInTouch"
+            app:destination="@id/getInTouchPageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginScreenFragment"
         android:name="com.example.newsapp.ui.fragment.LoginScreenFragment"
@@ -18,4 +22,8 @@
             android:id="@+id/transationBottomNavHolder"
             app:destination="@id/bottomNavigatonHolderFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/getInTouchPageFragment"
+        android:name="com.example.newsapp.ui.fragment.GetInTouchPageFragment"
+        android:label="GetInTouchPageFragment" />
 </navigation>
