@@ -27,7 +27,7 @@ class BottomNavigatonHolderFragment : Fragment() {
             when(item.itemId){
                 R.id.action_home -> openFragment(HomePageFragment())
                 R.id.action_search -> openFragment(SearchPageFragment())
-                R.id.action_categories -> openFragment(FavoritesPageFragment())
+                R.id.action_categories -> openFragment(CategoriesPageFragment())
                 R.id.action_favorites -> openFragment(FavoritesPageFragment())
                 R.id.action_profile -> openFragment(ProfilePageFragment())
 
