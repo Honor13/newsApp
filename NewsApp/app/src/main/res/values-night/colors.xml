@@ -10,5 +10,7 @@
     <color name="cardBackgroundColor">#232D3F</color>
     <color name="iconColor">#008170</color>
     <color name="buttonColor">#005B41</color>
+    <color name="transparentGray">#80CBC9CC</color>
     <color name="descriptionTextColor">#AFAEAF</color>
+    <color name="splashScreenBackGround">#22292F</color>
 </resources>
