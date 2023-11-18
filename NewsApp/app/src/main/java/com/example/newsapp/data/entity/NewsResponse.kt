@@ -7,7 +7,7 @@ data class NewsResponse(
     @Expose
     val articles: List<Article>,
     @Expose
-    val status: String,
+    val status: String?=null,
     @Expose
-    val totalResults: Int
+    val totalResults: Int?=0
 )

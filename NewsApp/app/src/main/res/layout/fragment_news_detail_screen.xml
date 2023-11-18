@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="objectDetailScreenFragment"
+            type="com.example.newsapp.ui.fragment.NewsDetailScreenFragment" />
+            <variable
+                name="objectNews"
+                type="com.example.newsapp.data.entity.Article" />
     </data>
 
     <LinearLayout
@@ -71,7 +76,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Source"
+                                    android:text='@{"Source: "+objectNews.source.name}'
                                     android:textSize="15dp"
                                     android:fontFamily="@font/g_light"
                                     android:textColor="@color/white"
@@ -80,7 +85,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="5 hour ago"
+                                    android:text="@{objectNews.publishedAt}"
                                     android:gravity="right"
                                     android:textSize="15dp"
                                     android:fontFamily="@font/g_light"
@@ -92,7 +97,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TITLE"
+                            android:text="@{objectNews.title}"
                             android:padding="10dp"
                             android:textSize="20dp"
                             android:fontFamily="@font/g_bold"
@@ -102,7 +107,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Description"
+                            android:text="@{objectNews.description}"
                             android:textSize="15dp"
                             android:padding="10dp"
                             android:fontFamily="@font/g_light"

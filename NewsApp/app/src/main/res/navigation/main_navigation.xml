@@ -12,6 +12,9 @@
         <action
             android:id="@+id/transactionGetInTouch"
             app:destination="@id/getInTouchPageFragment" />
+        <action
+            android:id="@+id/transactionNewsDetailScreenFragment"
+            app:destination="@id/newsDetailScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginScreenFragment"
@@ -37,5 +40,13 @@
             app:exitAnim="@android:anim/fade_out"
             app:popEnterAnim="@android:anim/fade_in"
             app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailScreenFragment"
+        android:name="com.example.newsapp.ui.fragment.NewsDetailScreenFragment"
+        android:label="NewsDetailScreenFragment" >
+        <argument
+            android:name="newsArticle"
+            app:argType="com.example.newsapp.data.entity.Article" />
     </fragment>
 </navigation>

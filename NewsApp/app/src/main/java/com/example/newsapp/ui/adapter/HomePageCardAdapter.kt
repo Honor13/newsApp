@@ -3,10 +3,12 @@ package com.example.newsapp.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
 import com.example.newsapp.data.entity.Article
 import com.example.newsapp.databinding.NewsCardDesignBinding
+import com.example.newsapp.ui.fragment.BottomNavigatonHolderFragmentDirections
 import com.squareup.picasso.Picasso
 
 data class HomePageCardAdapter(var newsList:List<Article>):RecyclerView.Adapter<HomePageCardAdapter.HomePageNewsViewHolder>() {
@@ -30,7 +32,12 @@ data class HomePageCardAdapter(var newsList:List<Article>):RecyclerView.Adapter<
 
         b.objectNews = news
 
-        b.textDescription.text = news.description
+
+
+        b.cardViewSatir.setOnClickListener{
+            val transaction = BottomNavigatonHolderFragmentDirections.transactionNewsDetailScreenFragment(news)
+            Navigation.findNavController(it).navigate(transaction)
+        }
         b.textMinute.text = "1 munite ago"
         Picasso.get()
             .load(news.urlToImage)
