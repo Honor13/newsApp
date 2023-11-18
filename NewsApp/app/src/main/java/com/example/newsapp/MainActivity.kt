@@ -10,7 +10,10 @@ import com.example.newsapp.ui.fragment.FavoritesPageFragment
 import com.example.newsapp.ui.fragment.HomePageFragment
 import com.example.newsapp.ui.fragment.ProfilePageFragment
 import com.example.newsapp.ui.fragment.SearchPageFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityMainBinding

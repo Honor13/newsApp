@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -48,6 +50,18 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+
+    //Retrofit
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     //Picasso
     implementation("com.squareup.picasso:picasso:2.71828")

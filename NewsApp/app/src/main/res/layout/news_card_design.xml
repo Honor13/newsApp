@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+            <variable
+                name="objectNews"
+                type="com.example.newsapp.data.entity.Article" />
     </data>
 
     <LinearLayout
@@ -38,37 +40,39 @@
 
                 <TextView
                     android:id="@+id/textHead"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="TextHead"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="45dp"
+                    android:text='@{objectNews.title.length() > 20 ? objectNews.title.substring(0, 20) + " ..." : objectNews.title }'
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textDescription"
-                    android:layout_width="150dp"
-                    android:layout_height="25dp"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="40dp"
-                    android:text="TextDescriptionss"
+                    android:layout_marginTop="5dp"
+                    android:text='@{objectNews.description.length() > 40 ? objectNews.description.substring(0, 40) + " ..." : objectNews.description }'
                     android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
-                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/textHead" />
 
                 <TextView
                     android:id="@+id/textMinute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="2dp"
                     android:text="TextView"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView" />
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/textDescription" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

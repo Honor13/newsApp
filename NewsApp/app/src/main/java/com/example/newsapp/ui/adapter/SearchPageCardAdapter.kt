@@ -1,17 +1,14 @@
 package com.example.newsapp.ui.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.example.newsapp.data.entity.News
+import com.example.newsapp.data.entity.Article
 import com.example.newsapp.databinding.NewsCardDesignBinding
-import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 
-class SearchPageCardAdapter (var mContext: Context, var newsList:List<News>)
+class SearchPageCardAdapter (var mContext: Context, var newsList:List<Article>)
     : RecyclerView.Adapter<SearchPageCardAdapter.CardTasarimTutucu>() {
     inner class CardTasarimTutucu( val binding:NewsCardDesignBinding ) : RecyclerView.ViewHolder(binding.root)
 
@@ -25,16 +22,16 @@ class SearchPageCardAdapter (var mContext: Context, var newsList:List<News>)
         val news = newsList.get(position)
         val t = holder.binding
 
-        t.textHead.text=news.name
+        t.textHead.text=news.title
         t.textDescription.text=news.description
-        t.textMinute.text=news.category
+        t.textMinute.text=news.urlToImage
 
         t.cardViewSatir.setOnClickListener {
             // carda basılınca newsDetail sayfasına gitmeli
         }
 
         Picasso.get()
-            .load(news.url)
+            .load(news.urlToImage)
             .resize(150,150)
             .into(t.imageView)
         

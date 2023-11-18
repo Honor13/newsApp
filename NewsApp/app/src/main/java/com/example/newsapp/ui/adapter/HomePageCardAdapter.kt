@@ -5,12 +5,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
-import com.example.newsapp.data.entity.News
-import com.example.newsapp.databinding.FragmentHomePageBinding
+import com.example.newsapp.data.entity.Article
 import com.example.newsapp.databinding.NewsCardDesignBinding
 import com.squareup.picasso.Picasso
 
-data class HomePageCardAdapter(var newsList:List<News>):RecyclerView.Adapter<HomePageCardAdapter.HomePageNewsViewHolder>() {
+data class HomePageCardAdapter(var newsList:List<Article>):RecyclerView.Adapter<HomePageCardAdapter.HomePageNewsViewHolder>() {
 
     inner class HomePageNewsViewHolder(var binding: NewsCardDesignBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -29,11 +28,12 @@ data class HomePageCardAdapter(var newsList:List<News>):RecyclerView.Adapter<Hom
         val news = newsList.get(position)
         val b = holder.binding
 
-        b.textHead.text = news.name
+        b.objectNews = news
+
         b.textDescription.text = news.description
         b.textMinute.text = "1 munite ago"
         Picasso.get()
-            .load(news.url)
+            .load(news.urlToImage)
             .resize(150,150)
             .into(b.imageView)
 

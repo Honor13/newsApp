@@ -5,13 +5,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.newsapp.data.entity.News
+import com.example.newsapp.data.entity.Article
 import com.example.newsapp.databinding.FavoriNewsCardBinding
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 
 
-class FavoriPageAdapter(var mContext: Context, var favoriList: List<News>)
+class FavoriPageAdapter(var mContext: Context, var favoriList: List<Article>)
     :RecyclerView.Adapter<FavoriPageAdapter.CardTasarimTutucu>() {
     inner  class CardTasarimTutucu(val binding: FavoriNewsCardBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -28,24 +28,24 @@ class FavoriPageAdapter(var mContext: Context, var favoriList: List<News>)
         val news = favoriList.get(position)
         val t = holder.binding
 
-        t.textName.text=news.name
+        t.textName.text=news.title
         t.textDescription.text=news.description
-        t.textMinute.text=news.category
+        t.textMinute.text="1 minute ago"
 
         t.favoriCardSatir.setOnClickListener {
             // Carda tıklanıldıgı anda News Detail sayfasına gitmeli
         }
 
         t.iconDelete.setOnClickListener {
-            Snackbar.make(it,"${news.name} Do you want to delete this news?", Snackbar.LENGTH_SHORT)
+            Snackbar.make(it,"${news.title} Do you want to delete this news?", Snackbar.LENGTH_SHORT)
                 .setAction("Yes"){
-                    delete(news.id)
+                    Log.e("Dante","Silme işlemi haber kaydedildikten sonra yapılacak.(Room Database)")
                 }
                 .show()
 
         }
         Picasso.get()
-            .load(news.url)
+            .load(news.urlToImage)
             .resize(150,150)
             .into(t.imageNews)
 
