@@ -24,9 +24,15 @@ class RegisterScreenFragment : Fragment() {
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_register_screen,container, false)
 
         binding.registerFragment= this
+
+      
+
+
         binding.textCreateSignIn.setOnClickListener {
 
         }
+
+
 
 
 
