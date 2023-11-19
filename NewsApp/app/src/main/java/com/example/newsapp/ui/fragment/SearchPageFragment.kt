@@ -7,20 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView.OnQueryTextListener
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.newsapp.R
 import com.example.newsapp.databinding.FragmentSearchPageBinding
+import com.example.newsapp.ui.viewmodel.SearchPageViewModel
 
 class SearchPageFragment : Fragment() {
     private lateinit var binding: FragmentSearchPageBinding
+    private lateinit var viewModel: SearchPageViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentSearchPageBinding.inflate(inflater, container, false)
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_search_page, container, false)
+        binding.searchFragment = this
         binding.rv.layoutManager = LinearLayoutManager(requireContext())
+        binding.lifecycleOwner = viewLifecycleOwner
 
 
 //        // manuel birkaç veri
@@ -61,6 +63,9 @@ class SearchPageFragment : Fragment() {
 
         return binding.root
     }
+
+    // viewModel bağlama işlemi
+
 
     fun search(searchWord: String) {
         Log.e("Search News ", searchWord)

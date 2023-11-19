@@ -7,6 +7,9 @@
             <variable
                 name="objectHomePageFragment"
                 type="com.example.newsapp.ui.fragment.HomePageFragment" />
+        <variable
+            name="homePageCardAdapter"
+            type="com.example.newsapp.ui.adapter.HomePageCardAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,6 +49,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:adapter="@{homePageCardAdapter}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
