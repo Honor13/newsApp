@@ -33,7 +33,6 @@ data class HomePageCardAdapter(var newsList:List<Article>):RecyclerView.Adapter<
         b.objectNews = news
 
 
-
         b.cardViewSatir.setOnClickListener{
             val transaction = BottomNavigatonHolderFragmentDirections.transactionNewsDetailScreenFragment(news)
             Navigation.findNavController(it).navigate(transaction)

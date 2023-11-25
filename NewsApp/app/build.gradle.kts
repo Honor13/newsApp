@@ -66,6 +66,7 @@ dependencies {
     //Firebase
     implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.9.1")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     //Picasso

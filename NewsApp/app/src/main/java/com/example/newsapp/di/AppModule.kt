@@ -4,6 +4,9 @@ import com.example.newsapp.data.datasource.NewsDataSource
 import com.example.newsapp.data.repo.NewsRepository
 import com.example.newsapp.retrofit.ApiUtils
 import com.example.newsapp.retrofit.NewsHeadLineDao
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,8 +21,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideNewsDataSource(nDaoInterface : NewsHeadLineDao):NewsDataSource {
-        return  NewsDataSource(nDaoInterface)
+    fun provideNewsDataSource(nDaoInterface : NewsHeadLineDao,collectionFavorites:CollectionReference):NewsDataSource {
+        return  NewsDataSource(nDaoInterface,collectionFavorites)
     }
 
 
@@ -33,6 +36,12 @@ class AppModule {
     @Singleton
     fun provideNewsHeadLinesDao() : NewsHeadLineDao {
         return ApiUtils.getHeadLinesDao()
+    }
+
+    @Provides
+    @Singleton
+    fun providesCollectionFavorites() : CollectionReference {
+        return Firebase.firestore.collection("Favorites")
     }
 
 
