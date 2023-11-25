@@ -28,9 +28,7 @@ class FavoriPageAdapter(var mContext: Context, var favoriList: List<Article>)
         val news = favoriList.get(position)
         val t = holder.binding
 
-        t.textName.text=news.title
-        t.textDescription.text=news.description
-        t.textMinute.text="1 minute ago"
+        t.cardNesnesi = news
 
         t.favoriCardSatir.setOnClickListener {
             // Carda tıklanıldıgı anda News Detail sayfasına gitmeli
