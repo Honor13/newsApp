@@ -37,7 +37,6 @@ class BottomNavigatonHolderFragment : Fragment() {
         }
         openFragment(HomePageFragment())
 
-
         return binding.root
     }
 
