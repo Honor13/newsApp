@@ -48,7 +48,6 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:onClick="@{() -> registerFragment.buttonRegister(editCreateUsername.getText().toString(),editCreateEmail.getText().toString(),editCreatePassword.getText().toString(),editCreateRepassword.getText().toString()) }"
             android:backgroundTint="@color/buttonColor"
             android:text="@string/sign_up"
             android:textSize="24sp"
