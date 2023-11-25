@@ -21,8 +21,6 @@ class SplashScreenFragment : Fragment() {
 
         it = binding.lottieAnimationView
 
-
-
         binding.lottieAnimationView.addAnimatorListener(object : Animator.AnimatorListener{
             override fun onAnimationStart(animation: Animator) {
 

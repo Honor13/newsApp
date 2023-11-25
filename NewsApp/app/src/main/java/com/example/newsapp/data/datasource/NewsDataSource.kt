@@ -14,4 +14,5 @@ class NewsDataSource(var nDaoInterface : NewsHeadLineDao) {
         }
 
 
+
 }
