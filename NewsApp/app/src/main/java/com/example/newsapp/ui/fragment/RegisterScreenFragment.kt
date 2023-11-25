@@ -12,14 +12,15 @@ import androidx.navigation.Navigation
 import com.example.newsapp.R
 import com.example.newsapp.databinding.FragmentRegisterScreenBinding
 import com.example.newsapp.ui.viewmodel.RegisterScreenViewModel
-import com.google.firebase.auth.FirebaseAuth
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentRegisterScreenBinding
     private lateinit var viewModel: RegisterScreenViewModel
     private lateinit var firebaseAuth :FirebaseAuth
+    private lateinit var globalIterator : View
 
 
 
@@ -27,7 +28,7 @@ class RegisterScreenFragment : Fragment() {
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_register_screen,container, false)
         binding.registerFragment= this
 
-
+        globalIterator = binding.buttonSignUp
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.buttonSignUp.setOnClickListener {
@@ -43,8 +44,7 @@ class RegisterScreenFragment : Fragment() {
 
                    firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
                        if(it.isSuccessful){
-                           val intent = Intent(requireContext(), LoginScreenFragment::class.java)
-                           startActivity(intent)
+                           Navigation.findNavController(globalIterator).navigate(R.id.transactionLoginScreenFragment)
                        }else{
                            Toast.makeText(requireContext(),it.exception.toString(),Toast.LENGTH_SHORT).show()
                        }

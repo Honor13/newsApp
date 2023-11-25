@@ -24,6 +24,9 @@
         <action
             android:id="@+id/transationBottomNavHolder"
             app:destination="@id/bottomNavigatonHolderFragment" />
+        <action
+            android:id="@+id/transactionRegisterScreenFragment"
+            app:destination="@id/registerScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/getInTouchPageFragment"
@@ -48,5 +51,13 @@
         <argument
             android:name="newsArticle"
             app:argType="com.example.newsapp.data.entity.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreenFragment"
+        android:name="com.example.newsapp.ui.fragment.RegisterScreenFragment"
+        android:label="RegisterScreenFragment" >
+        <action
+            android:id="@+id/transactionLoginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
     </fragment>
 </navigation>

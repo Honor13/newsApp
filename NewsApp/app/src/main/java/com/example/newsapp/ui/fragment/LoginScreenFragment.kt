@@ -57,5 +57,8 @@ class LoginScreenFragment : Fragment() {
 
     }*/
 
+    fun transactionRegister(it:View){
+        Navigation.findNavController(it).navigate(R.id.transactionRegisterScreenFragment)
 
+    }
 }
